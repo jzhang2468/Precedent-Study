@@ -1,56 +1,94 @@
-# Excavating AI Editorial Archive Style Guide
+# Excavating AI Editorial Review Style Guide
 
 ## Aesthetic Direction
 
-The site uses a warm editorial portfolio style inspired by magazine layouts and writer-portfolio templates. The tone is archival, critical, and text-forward rather than promotional. The design should feel like a printed research dossier translated to the web: cream paper, dark ink, gold annotation marks, large serif headlines, and generous reading space.
+The site uses a black-and-white newspaper/magazine editorial aesthetic with interactive analytical plates. It should feel like a critical special issue: a masthead, paper texture, high-contrast serif headlines, column rules, captions, issue labels, restrained red editorial marks, and carefully framed image evidence.
 
-The visual language supports the subject matter of *Excavating AI*: images are treated as evidence, not decoration. Screenshots and figures from the original precedent are presented intact, with captions that identify their role in the argument.
+The interface keeps the interactive concept tools, but visually they are treated as editorial diagrams and annotated feature modules rather than a dark AI dashboard. The precedent images remain the main evidence.
 
 ## Palette
 
-- Paper background: warm cream and parchment tones.
-- Primary text: near-black brown ink.
-- Secondary text: muted brown-gray.
-- Accent: restrained archival gold.
-- Lines and rules: pale tan dividers.
-- Image grounds: soft white paper.
+- Paper: black-and-white newsprint cream.
+- Primary ink: near-black.
+- Body text: dark gray.
+- Secondary notes: mid gray.
+- Editorial red: active states, plate marks, section labels, source emphasis.
+- No additional color families should dominate; supporting interface tones stay grayscale.
 
 ## Typography
 
-- Display type: `Playfair Display` for the title, section headings, captions with emphasis, and editorial moments.
-- Interface/body type: `Rubik` for navigation, labels, metadata, buttons, and compact supporting text.
-- Headings are large and literary, while body copy remains calm and readable.
-- All letter spacing stays neutral; the design relies on scale, contrast, and spacing instead of exaggerated tracking.
+- Headlines and body reading: Georgia / Times-style serif, with large display scale for the hero and tighter serif hierarchy for sections.
+- Metadata, captions, controls, and section numbers: `IBM Plex Mono`.
+- Supporting deck text: `Space Grotesk` for contrast against the serif headlines.
+- The overall rhythm should feel like a magazine feature: large display headline, clean sans-serif deck, dense captions, and compact editorial controls.
 
 ## Page Structure
 
-- Sticky header: institutional identity, course/archive title, and a simple About link.
-- Section rail: scroll-aware navigation using gold star markers inspired by the reference aesthetic.
-- Hero: large editorial title and metadata paired with an original ImageNet interface image from *Excavating AI*.
-- Project facts: compact three-part metadata grid for medium, focus, and audience.
-- Article sections: long-form archive reading flow with clear dividers.
-- Image File section: a gallery of original precedent visuals.
-- Source lists: numbered editorial bibliography entries with notes.
-- Demo section: a small classifier interaction that explains reductive labeling.
-- Footer: quiet archive identity.
+- Sticky masthead: identifies the page as a GSAPP editorial review.
+- Section rail: numbered navigation styled like a magazine contents index.
+- Hero: special-issue title, deck, field labels, and original ImageNet interface image.
+- Overview: editorial framing plus three signal cards: input, operation, output.
+- Interactive Feature: data-pipeline simulator and evidence lens.
+- Image File: original precedent visuals as clickable editorial/architectural plates.
+- Format/Audience: concise contextual statement.
+- Part 2 / Layers of Analysis: ontological, historical/contextual, and visual/aesthetic analysis.
+- Source lists: bibliography in numbered newspaper-reference style.
+- Classification Demo: interactive output panel showing label, confidence, and critique.
 
 ## Components
 
-### Header
+### Masthead
 
-The header is sticky and translucent, with a thin bottom rule. It keeps the page grounded in the Columbia GSAPP project-archive context while staying visually quiet.
+The header uses print rules, uppercase metadata, and a centered publication title. It should feel like the top of a special issue rather than a software toolbar.
 
-### Section Rail
+### Image Plates
 
-The rail uses decorative star markers and active-state highlighting. On wide screens it can sit beside the content; on medium and mobile screens it becomes a horizontal sticky strip to avoid overlapping the long title.
+The Image File section treats each original image as an interactive editorial plate. Clicking a plate activates image motion and annotation overlays:
 
-### Hero Figure
+- Archive strip: the skull banner pans like a typological image strip.
+- Taxonomic section: the ImageNet taxonomy zooms and receives a section line.
+- Measurement elevation: the Diversity in Faces image receives dimension lines.
+- Population grid: the MS-Celeb montage zooms into selected windows.
+- Counter-image: the Memphis sanitation workers image pushes the protest signs forward.
 
-The hero figure must use original precedent material. The current image is the ImageNet Basic User Interface from *Excavating AI*. It is shown with `object-fit: contain` so the interface remains legible and is not cropped.
+Each plate updates a live readout below the image grid. The movement should explain why the image exists in the precedent study.
 
-### Image Dossier
+### Pipeline Simulator
 
-The Image File section includes original images downloaded from the project source:
+The pipeline simulator remains interactive, but is styled as a magazine diagram. It explains:
+
+1. Collect images
+2. Label images
+3. Inherit taxonomy
+4. Train model
+5. Public critique
+
+Each stage updates the output text, active track, and neutrality/risk meter.
+
+### Evidence Lens
+
+The evidence lens swaps between original precedent visuals and gives each one an interpretive caption. It supports the argument that the project builds critique through screenshots, taxonomies, dataset montages, and counter-images.
+
+### Ontology Cards
+
+The ontology cards make the project's building blocks interactive:
+
+- Material layer
+- Classification layer
+- Labor layer
+- Technical layer
+- Institutional layer
+- Political layer
+
+Selecting a card updates a live explanatory panel.
+
+### Classification Demo
+
+The demo simulates the reductive logic of ImageNet Roulette. A sample is assigned a label and confidence score, followed by critique text explaining what the output hides.
+
+## Original Image Assets
+
+The site uses original images downloaded from `https://excavating.ai/`:
 
 - `assets/original/imagenet-interface-2.jpg`
 - `assets/original/top-banner-skulls.png`
@@ -59,30 +97,22 @@ The Image File section includes original images downloaded from the project sour
 - `assets/original/msceleb.jpg`
 - `assets/original/i-am-a-man.jpg`
 
-These images should remain documentary and captioned. Avoid replacing them with generated imagery.
-
-### Source Lists
-
-Bibliographic entries use large serif numbers and thin rules. Each entry has a source line and a short interpretive note, matching the archive/dossier tone.
-
-### Interactive Demo
-
-The classifier demo is intentionally simple. Its purpose is not to simulate ImageNet Roulette accurately, but to show the conceptual reduction of a person into one administrative label. The panel is styled like a small editorial annotation rather than an app widget.
+Do not replace these with generated images. The project depends on the evidentiary force of the original materials.
 
 ## Responsive Behavior
 
-- Desktop: two-column hero with text and image side by side.
-- Medium screens: section rail becomes a sticky horizontal strip.
-- Mobile: single-column hero, scrollable section rail, stacked project facts, and one-column image gallery.
-- Images use stable aspect ratios and `object-fit: contain` where preserving the original figure matters.
+- Desktop: magazine-style two-column hero; pipeline and evidence lens side by side; image plates in a feature grid.
+- Medium screens: section rail becomes a horizontal contents strip.
+- Mobile: single-column layout; all interactive modules stack vertically.
+- Controls keep stable sizes so interaction does not shift the layout.
 
 ## Implementation Files
 
-- `index.html`: semantic page structure and content.
-- `style.css`: full visual system, responsive layout, and component styling.
-- `script.js`: section-rail active state and classifier demo interaction.
-- `assets/original/`: original precedent images from `https://excavating.ai/`.
+- `index.html`: semantic structure, research content, and interactive component markup.
+- `style.css`: newspaper/magazine aesthetic, responsive layout, editorial panels, image plates, controls.
+- `script.js`: section navigation active state, pipeline simulator, evidence lens, image plates, ontology cards, and classifier demo.
+- `assets/original/`: original images from the precedent.
 
 ## Design Rule
 
-Do not use invented or generated images for the precedent itself. Any primary visual material should come from the original project or clearly cited related source material, and it should be captioned as evidence.
+The site should read like an interactive critical publication. Avoid generic AI spectacle. Every visual and interaction should clarify one of the project claims: datasets are built, labels are political, taxonomies encode assumptions, and classification turns people into machine-readable categories.
