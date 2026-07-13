@@ -3,390 +3,483 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="An interactive editorial precedent study of Excavating AI by Kate Crawford and Trevor Paglen.">
-  <title>Excavating AI | Editorial Precedent Review</title>
+  <meta name="description" content="A complete interactive precedent study of Excavating AI by Kate Crawford and Trevor Paglen.">
+  <title>Excavating AI | Complete Precedent Study</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <canvas id="signalField" aria-hidden="true"></canvas>
+
   <header class="site-header">
-    <a class="brand" href="#intro" aria-label="Back to top">GSAPP Review</a>
-    <div class="masthead">
-      <span>Computational Design Practices</span>
-      <strong>Editorial Precedent Review</strong>
-    </div>
-    <a class="header-link" href="#visual-file">Read Plates</a>
+    <a class="brand" href="#cover" aria-label="Back to cover">
+      <span>2019</span>
+      <strong>EXCAVATING.AI</strong>
+    </a>
+    <nav class="top-nav" aria-label="Study sections">
+      <a class="active" href="#part-1">Part 1</a>
+      <a href="#system">System</a>
+      <a href="#part-2">Part 2</a>
+      <a href="#plates">Images</a>
+      <a href="#part-3">Part 3</a>
+      <a href="#relational-map">Map</a>
+      <a href="#assessment">Assessment</a>
+    </nav>
+    <button class="mode-button" id="scrambleToggle" type="button">SCRAMBLE</button>
   </header>
 
-  <nav class="section-rail" aria-label="Project sections">
-    <a class="active" href="#intro" aria-current="true"><span aria-hidden="true">01</span>Intro</a>
-    <a href="#overview"><span aria-hidden="true">02</span>Overview</a>
-    <a href="#interactive-lab"><span aria-hidden="true">03</span>System</a>
-    <a href="#visual-file"><span aria-hidden="true">04</span>Images</a>
-    <a href="#layers"><span aria-hidden="true">05</span>Analysis</a>
-    <a href="#author-file"><span aria-hidden="true">06</span>Sources</a>
-    <a href="#demo"><span aria-hidden="true">07</span>Demo</a>
-  </nav>
+  <aside class="section-rail" aria-label="Progress navigation">
+    <a class="active" href="#cover"><span>00</span>Cover</a>
+    <a href="#part-1"><span>01</span>Data</a>
+    <a href="#system"><span>02</span>Pipeline</a>
+    <a href="#part-2"><span>03</span>Layers</a>
+    <a href="#plates"><span>04</span>Plates</a>
+    <a href="#part-3"><span>05</span>Method</a>
+    <a href="#relational-map"><span>06</span>Map</a>
+    <a href="#assessment"><span>07</span>Critique</a>
+    <a href="#sources"><span>08</span>Sources</a>
+  </aside>
 
   <main>
-    <section id="intro" class="hero" data-section>
-      <div class="hero-copy">
-        <p class="eyebrow">Special Issue / Dataset Archaeology</p>
-        <h1>Excavating AI: The Politics of Images in Machine Learning Training Sets</h1>
-        <p class="dek">An interactive editorial feature on Crawford and Paglen's project: images are collected, labels are assigned, taxonomies harden, and a model returns social judgments as technical output.</p>
-
-        <div class="terminal-strip" aria-label="System status">
-          <span>Field: Computer Vision</span>
-          <span>Method: Dataset Archaeology</span>
-          <span>Question: Taxonomic Bias</span>
-        </div>
-
-        <div class="hero-actions" aria-label="Primary sections">
-          <a href="#interactive-lab">Inspect Pipeline</a>
-          <a href="#layers">Read Analysis</a>
-        </div>
+    <section id="cover" class="cover section-panel" data-section>
+      <div class="cover-copy">
+        <p class="kicker">Complete Precedent Study / Interactive Poster System</p>
+        <h1><span>Excavating</span> AI</h1>
+        <p class="deck">A corrupted magazine interface for Kate Crawford and Trevor Paglen's project on machine-learning training sets, image taxonomies, and the politics hidden inside computer vision.</p>
       </div>
-
-      <figure class="hero-figure scan-frame">
-        <img src="assets/original/imagenet-interface-2.jpg" alt="ImageNet basic user interface used by Amazon Mechanical Turk workers to label pictures.">
-        <figcaption>Original project image: interface used by Amazon Turk workers to label pictures in ImageNet, reproduced from <a href="https://excavating.ai/" target="_blank" rel="noopener">Excavating AI</a>.</figcaption>
-      </figure>
     </section>
 
-    <article class="article-body" aria-label="Precedent study">
-      <section id="overview" class="content-section overview-section" data-section>
-        <p class="section-kicker">Overview</p>
-        <h2>Dataset archaeology as an interface problem</h2>
-        <p>Excavating AI is a 2019 digital essay and research project by Kate Crawford and Trevor Paglen. Working through what the authors call an archaeology of datasets, it examines how machine learning systems such as ImageNet are assembled from labeled images, and how the taxonomies used to sort those images quietly encode assumptions, judgments, and biases about people.</p>
-        <p>The project opens up the training data that teaches AI systems how to see, arguing that these classifications are never neutral. In this redesign, the website behaves like an inspection tool: the viewer can trace how a visual input becomes a dataset item, then a category, then a social claim.</p>
+    <section id="part-1" class="study-sheet section-panel" data-section>
+      <div class="section-title">
+        <p class="kicker">Part 1 / Data Sheet</p>
+        <h2>What is the precedent?</h2>
+        <p>Excavating AI is a digital essay, research project, and public artwork that studies how training images become political infrastructure. It moves upstream from spectacular AI outputs to the datasets, labels, taxonomies, and institutional choices that make those outputs possible.</p>
+      </div>
 
-        <div class="signal-cards" aria-label="Core project signals">
-          <div>
-            <span>Input</span>
-            <strong>Images of people</strong>
-            <p>Scraped, archived, cropped, and prepared for machine learning.</p>
+      <div class="data-grid">
+        <article>
+          <span>Authors</span>
+          <strong>Kate Crawford + Trevor Paglen</strong>
+          <p>Crawford brings AI politics, data studies, and institutional critique. Paglen brings visual investigation, surveillance studies, and photographic evidence.</p>
+        </article>
+        <article>
+          <span>Date</span>
+          <strong>September 19, 2019</strong>
+          <p>Published by AI Now Institute, then extended through Training Humans at Fondazione Prada and the Barbican.</p>
+        </article>
+        <article>
+          <span>Medium</span>
+          <strong>Digital essay + dataset experiment</strong>
+          <p>Text, screenshots, dataset images, archival references, ImageNet Roulette, and exhibition display.</p>
+        </article>
+        <article>
+          <span>Site of inquiry</span>
+          <strong>ImageNet and adjacent face datasets</strong>
+          <p>ImageNet, WordNet, JAFFE, UTKFace, IBM Diversity in Faces, MS-Celeb, and other training-image archives.</p>
+        </article>
+        <article>
+          <span>Audience</span>
+          <strong>Researchers, artists, designers, technologists, publics</strong>
+          <p>The project is written for people who build AI systems and people who are governed by them.</p>
+        </article>
+        <article>
+          <span>Central question</span>
+          <strong>Who decides what images mean?</strong>
+          <p>The essay asks how labels and taxonomies translate social assumptions into apparently technical recognition.</p>
+        </article>
+      </div>
+
+      <div class="argument-strip">
+        <span>image</span>
+        <span>label</span>
+        <span>taxonomy</span>
+        <span>model</span>
+        <span>judgment</span>
+        <span>institution</span>
+      </div>
+    </section>
+
+    <section id="system" class="system-lab section-panel" data-section>
+      <div class="section-title">
+        <p class="kicker">Interactive System / Software Logic</p>
+        <h2>The project as a machine-vision pipeline</h2>
+        <p>Click through the stages. The animated scanner translates the precedent's argument into a sequence: collect images, assign labels, inherit categories, train a model, produce a classification, then make the politics public.</p>
+      </div>
+
+      <div class="system-layout">
+        <div class="cg-stage stage-collect" aria-label="Animated computational graphic">
+          <div class="face-stack" aria-hidden="true">
+            <img class="face-layer layer-a" src="assets/reference/face-fragment-vertical.jpg" alt="">
+            <img class="face-layer layer-b" src="assets/reference/ascii-faces.jpg" alt="">
+            <img class="face-layer layer-c" src="assets/original/diff-face.png" alt="">
           </div>
-          <div>
-            <span>Operation</span>
-            <strong>Classification</strong>
-            <p>Human annotation and inherited taxonomies convert images into categories.</p>
-          </div>
-          <div>
-            <span>Output</span>
-            <strong>Judgment as data</strong>
-            <p>The model presents social sorting as technical recognition.</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="interactive-lab" class="content-section lab-section" data-section>
-        <p class="section-kicker">Interactive Feature</p>
-        <h2>Read the argument as a data pipeline</h2>
-        <p>The precedent is not only a text about AI. It exposes a chain of operations. Each stage below corresponds to a concept Crawford and Paglen wanted viewers to confront: data collection, annotation labor, inherited categories, model output, and public critique.</p>
-
-        <div class="lab-grid">
-          <div class="pipeline-console">
-            <div class="panel-heading">
-              <span>Pipeline Simulator</span>
-              <strong id="pipelineTitle">01 / Collect images</strong>
-            </div>
-            <div class="pipeline-track" aria-hidden="true">
-              <span class="track-node active"></span>
-              <span class="track-node"></span>
-              <span class="track-node"></span>
-              <span class="track-node"></span>
-              <span class="track-node"></span>
-            </div>
-            <div class="pipeline-controls" aria-label="Pipeline stages">
-              <button class="pipeline-button active" type="button" data-stage="collect">Collect</button>
-              <button class="pipeline-button" type="button" data-stage="label">Label</button>
-              <button class="pipeline-button" type="button" data-stage="taxonomy">Taxonomy</button>
-              <button class="pipeline-button" type="button" data-stage="model">Model</button>
-              <button class="pipeline-button" type="button" data-stage="critique">Critique</button>
-            </div>
-            <div class="pipeline-output">
-              <p id="pipelineText">Images are gathered from online sources and archives. Before AI appears intelligent, it depends on a massive visual supply chain: photographs, screenshots, portraits, and bodies turned into data.</p>
-              <div class="metric-row">
-                <span>Neutrality claim</span>
-                <div class="metric-bar"><span id="neutralityBar" style="width: 22%"></span></div>
-              </div>
-              <p class="system-note" id="pipelineNote">Crawford and Paglen begin by asking viewers to inspect the dataset itself, not only the finished model.</p>
-            </div>
-          </div>
-
-          <div class="lens-console">
-            <div class="panel-heading">
-              <span>Evidence Lens</span>
-              <strong id="lensTitle">Interface as labor site</strong>
-            </div>
-            <figure class="lens-figure scan-frame">
-              <img id="lensImage" src="assets/original/imagenet-interface-2.jpg" alt="ImageNet interface shown as evidence in Excavating AI.">
-              <figcaption id="lensCaption">The labeling interface makes visible the human work behind machine vision.</figcaption>
-            </figure>
-            <div class="lens-controls" aria-label="Evidence images">
-              <button class="lens-button active" type="button" data-lens="interface">Interface</button>
-              <button class="lens-button" type="button" data-lens="taxonomy">Taxonomy</button>
-              <button class="lens-button" type="button" data-lens="dataset">Dataset</button>
-              <button class="lens-button" type="button" data-lens="history">History</button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="visual-file" class="content-section visual-file" data-section>
-        <p class="section-kicker">Image File</p>
-        <h2>Original visuals as interactive drawing plates</h2>
-        <p>These images come from the original Excavating AI essay. Click each plate to move the image like an architectural drawing: zoom, slide, expose a layer, or pull a section line through the evidence. The motion explains why the image matters to the precedent's argument.</p>
-
-        <div class="image-dossier" aria-label="Original images from Excavating AI">
-          <figure class="wide-image scan-frame analysis-plate" tabindex="0" role="button" aria-pressed="false" data-plate="skulls" data-motion="archive">
-            <span class="plate-index">PL-01 / ARCHIVE STRIP</span>
-            <img src="assets/original/top-banner-skulls.png" alt="Top banner image from Excavating AI showing a mosaic of skull images on a black background.">
-            <div class="plate-overlay" aria-hidden="true">
-              <span class="section-line horizontal"></span>
-              <span class="callout callout-a">typological row</span>
-              <span class="callout callout-b">classification history</span>
-            </div>
-            <figcaption>Top banner image from Excavating AI. Click to pan the strip as a taxonomy of historical visual measurement.</figcaption>
-          </figure>
-          <figure class="scan-frame analysis-plate" tabindex="0" role="button" aria-pressed="false" data-plate="taxonomy" data-motion="section">
-            <span class="plate-index">PL-02 / TAXONOMIC SECTION</span>
-            <img src="assets/original/imagenet-taxonomy.png" alt="ImageNet taxonomy screenshot showing person categories and hierarchy.">
-            <div class="plate-overlay" aria-hidden="true">
-              <span class="section-line vertical"></span>
-              <span class="callout callout-a">hierarchy</span>
-              <span class="callout callout-b">inherited categories</span>
-            </div>
-            <figcaption>ImageNet taxonomy screenshot. Click to cut into the hierarchy and show how categories become structure.</figcaption>
-          </figure>
-          <figure class="scan-frame analysis-plate" tabindex="0" role="button" aria-pressed="false" data-plate="measurement" data-motion="measure">
-            <span class="plate-index">PL-03 / MEASUREMENT ELEVATION</span>
-            <img src="assets/original/diff-face.png" alt="IBM Diversity in Faces diagram with facial landmarks and measurement labels.">
-            <div class="plate-overlay" aria-hidden="true">
-              <span class="measure-line measure-one"></span>
-              <span class="measure-line measure-two"></span>
-              <span class="callout callout-a">facial metrics</span>
-              <span class="callout callout-b">body as diagram</span>
-            </div>
-            <figcaption>IBM's Diversity in Faces figure. Click to overlay measurement lines and show the face treated as technical geometry.</figcaption>
-          </figure>
-          <figure class="scan-frame analysis-plate" tabindex="0" role="button" aria-pressed="false" data-plate="dataset" data-motion="population">
-            <span class="plate-index">PL-04 / POPULATION GRID</span>
-            <img src="assets/original/msceleb.jpg" alt="MS-Celeb dataset image montage made of many face thumbnails.">
-            <div class="plate-overlay" aria-hidden="true">
-              <span class="grid-window window-one"></span>
-              <span class="grid-window window-two"></span>
-              <span class="callout callout-a">many faces</span>
-              <span class="callout callout-b">one dataset</span>
-            </div>
-            <figcaption>MS-Celeb dataset montage. Click to zoom into the crowd and show how individuals become a population grid.</figcaption>
-          </figure>
-          <figure class="scan-frame analysis-plate" tabindex="0" role="button" aria-pressed="false" data-plate="counterimage" data-motion="counter">
-            <span class="plate-index">PL-05 / COUNTER-IMAGE</span>
-            <img src="assets/original/i-am-a-man.jpg" alt="Memphis sanitation workers holding I AM A MAN protest signs in 1968.">
-            <div class="plate-overlay" aria-hidden="true">
-              <span class="section-line horizontal"></span>
-              <span class="callout callout-a">personhood</span>
-              <span class="callout callout-b">resists label</span>
-            </div>
-            <figcaption>Memphis Sanitation Workers Strike of 1968. Click to bring the protest signs forward as a counter-image to classification.</figcaption>
-          </figure>
+          <div class="target-reticle" aria-hidden="true"></div>
+          <div class="classification-chip" id="systemChip">COLLECT / unlabeled image mass</div>
         </div>
 
-        <div class="plate-readout" aria-live="polite">
-          <span id="plateStatus">Plate idle</span>
-          <strong id="plateTitle">Click an image plate to activate its architectural reading.</strong>
-          <p id="plateText">The image will move like a drawing layer: panning, sectioning, measuring, or zooming to explain the concept it carries in the precedent study.</p>
+        <div class="pipeline-console">
+          <div class="pipeline-controls" aria-label="Pipeline stages">
+            <button class="pipeline-button active" type="button" data-stage="collect">01 Collect</button>
+            <button class="pipeline-button" type="button" data-stage="label">02 Label</button>
+            <button class="pipeline-button" type="button" data-stage="taxonomy">03 Taxonomy</button>
+            <button class="pipeline-button" type="button" data-stage="train">04 Train</button>
+            <button class="pipeline-button" type="button" data-stage="classify">05 Classify</button>
+            <button class="pipeline-button" type="button" data-stage="critique">06 Critique</button>
+          </div>
+          <div class="pipeline-output">
+            <span id="pipelineTag">DATA PROVENANCE</span>
+            <h3 id="pipelineTitle">Images are gathered before the model exists.</h3>
+            <p id="pipelineText">The project begins with scraped images, image-search results, research datasets, face archives, and museum-scale collections. The first critical move is to treat data as something made, not found.</p>
+            <div class="meter-set" aria-label="System attributes">
+              <label>
+                <span>Visibility</span>
+                <i><b id="visibilityMeter" style="width: 38%"></b></i>
+              </label>
+              <label>
+                <span>Social force</span>
+                <i><b id="politicsMeter" style="width: 72%"></b></i>
+              </label>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="format" class="content-section split-section" data-section>
-        <div>
-          <p class="section-kicker">Format &amp; Intended Audience</p>
-          <h2>A research essay with exhibition gravity</h2>
-          <p>The work takes the form of a digital essay, research project, and visual investigation of image datasets. It was later published as a peer-reviewed article in AI &amp; Society and extended into the exhibition Training Humans at Fondazione Prada.</p>
-        </div>
-        <aside class="pull-quote">
-          <span aria-hidden="true">AI</span>
-          <p>For artists, designers, AI researchers, technologists, theorists, students, and general readers interested in how machine learning systems classify images and people.</p>
+    <section id="relational-map" class="relational-map section-panel" data-section>
+      <div class="section-title">
+        <p class="kicker">Relational Diagram / Actors + Processes</p>
+        <h2>Who acts on the dataset, and what moves through it?</h2>
+        <p>This map adapts the actor-process approach from environmental systems mapping and the black-field route language of Anatomy of an AI System. Click any node to read how that actor, resource, or process participates in Excavating AI.</p>
+      </div>
+
+      <div class="map-shell">
+        <svg class="relation-svg" viewBox="0 0 1200 720" role="img" aria-labelledby="mapTitle mapDesc">
+          <title id="mapTitle">Relational diagram of Excavating AI</title>
+          <desc id="mapDesc">A systems map connecting image subjects, datasets, annotation labor, ImageNet taxonomy, ImageNet Roulette, Crawford and Paglen, publics, institutional response, and design critique.</desc>
+
+          <g class="map-grid" aria-hidden="true">
+            <path d="M70 82 H1110" />
+            <path d="M70 206 H1110" />
+            <path d="M70 330 H1110" />
+            <path d="M70 454 H1110" />
+            <path d="M70 578 H1110" />
+            <path d="M220 40 V680" />
+            <path d="M470 40 V680" />
+            <path d="M720 40 V680" />
+            <path d="M970 40 V680" />
+          </g>
+
+          <g class="map-paths" aria-hidden="true">
+            <path class="data-route" data-path="subjects web-images face-datasets" d="M110 134 V202 M110 242 V324" />
+            <path class="data-route" data-path="face-datasets training-set" d="M158 344 C270 344 356 300 514 300" />
+            <path class="data-route" data-path="web-images training-set" d="M152 222 C270 222 374 252 514 284" />
+            <path class="main-route" data-path="training-set roulette publics response" d="M626 300 C674 300 666 380 710 380 C796 380 866 330 922 306 C982 282 1004 256 1060 256" />
+            <path class="main-route" data-path="wordnet taxonomy training-set roulette" d="M110 478 C210 478 210 446 332 446 C430 446 430 320 540 320 C640 320 640 380 710 380" />
+            <path class="process-route" data-path="builders taxonomy training-set" d="M318 206 C366 206 390 260 436 292 C476 320 500 304 540 300" />
+            <path class="process-route" data-path="labelers taxonomy training-set" d="M318 326 C390 326 390 372 455 396 C492 410 512 354 540 330" />
+            <path class="author-route" data-path="authors essay publics response design-critique" d="M790 156 C760 210 760 250 804 292 C858 344 946 336 1018 388 C1060 420 1054 512 1088 566" />
+            <path class="author-route" data-path="authors exhibition publics" d="M800 156 C836 214 812 458 850 500 C895 550 982 548 1060 256" />
+            <path class="issue-route" data-path="response disappearance design-critique" d="M1060 256 C1118 304 1118 430 1068 484 C1030 526 1042 560 1088 566" />
+            <path class="issue-route" data-path="subjects consent design-critique" d="M110 112 C142 602 756 620 1088 566" />
+          </g>
+
+          <g class="map-node actor active" role="button" tabindex="0" data-map="subjects" transform="translate(110 112)">
+            <circle r="22" />
+            <text y="-34">Image subjects</text>
+            <text class="node-code" y="43">ACTOR</text>
+          </g>
+          <g class="map-node data" role="button" tabindex="0" data-map="web-images" transform="translate(110 222)">
+            <rect x="-42" y="-20" width="84" height="40" />
+            <text y="-32">Web images</text>
+            <text class="node-code" y="43">RESOURCE</text>
+          </g>
+          <g class="map-node data" role="button" tabindex="0" data-map="face-datasets" transform="translate(110 344)">
+            <rect x="-48" y="-20" width="96" height="40" />
+            <text y="-32">Face datasets</text>
+            <text class="node-code" y="43">RESOURCE</text>
+          </g>
+          <g class="map-node data" role="button" tabindex="0" data-map="wordnet" transform="translate(110 478)">
+            <rect x="-36" y="-18" width="72" height="36" />
+            <text y="-30">WordNet</text>
+            <text class="node-code" y="41">LANGUAGE</text>
+          </g>
+          <g class="map-node issue" role="button" tabindex="0" data-map="consent" transform="translate(110 610)">
+            <circle r="18" />
+            <text y="-30">Consent gap</text>
+            <text class="node-code" y="38">ISSUE</text>
+          </g>
+
+          <g class="map-node actor" role="button" tabindex="0" data-map="builders" transform="translate(318 206)">
+            <circle r="20" />
+            <text y="-32">Dataset builders</text>
+            <text class="node-code" y="40">ACTOR</text>
+          </g>
+          <g class="map-node actor" role="button" tabindex="0" data-map="labelers" transform="translate(318 326)">
+            <circle r="20" />
+            <text y="-32">MTurk labelers</text>
+            <text class="node-code" y="40">LABOR</text>
+          </g>
+          <g class="map-node process" role="button" tabindex="0" data-map="taxonomy" transform="translate(332 446)">
+            <circle r="28" />
+            <text y="-42">ImageNet taxonomy</text>
+            <text class="node-code" y="49">PROCESS</text>
+          </g>
+
+          <g class="map-node data" role="button" tabindex="0" data-map="training-set" transform="translate(570 300)">
+            <rect x="-56" y="-24" width="112" height="48" />
+            <text y="-40">Training set</text>
+            <text class="node-code" y="52">INFRASTRUCTURE</text>
+          </g>
+          <g class="map-node process" role="button" tabindex="0" data-map="roulette" transform="translate(710 380)">
+            <circle r="30" />
+            <text y="-44">ImageNet Roulette</text>
+            <text class="node-code" y="52">INTERFACE</text>
+          </g>
+
+          <g class="map-node actor" role="button" tabindex="0" data-map="authors" transform="translate(800 156)">
+            <circle r="23" />
+            <text y="-35">Crawford + Paglen</text>
+            <text class="node-code" y="44">AUTHOR</text>
+          </g>
+          <g class="map-node output" role="button" tabindex="0" data-map="essay" transform="translate(804 292)">
+            <rect x="-48" y="-22" width="96" height="44" />
+            <text y="-38">Excavating AI</text>
+            <text class="node-code" y="49">OUTPUT</text>
+          </g>
+          <g class="map-node output" role="button" tabindex="0" data-map="exhibition" transform="translate(850 500)">
+            <rect x="-52" y="-22" width="104" height="44" />
+            <text y="-38">Training Humans</text>
+            <text class="node-code" y="49">EXHIBITION</text>
+          </g>
+
+          <g class="map-node actor" role="button" tabindex="0" data-map="publics" transform="translate(1060 256)">
+            <circle r="22" />
+            <text y="-34">Public audiences</text>
+            <text class="node-code" y="43">PUBLIC</text>
+          </g>
+          <g class="map-node issue" role="button" tabindex="0" data-map="response" transform="translate(1018 388)">
+            <circle r="24" />
+            <text y="-38">Institutional response</text>
+            <text class="node-code" y="46">FEEDBACK</text>
+          </g>
+          <g class="map-node issue" role="button" tabindex="0" data-map="disappearance" transform="translate(1068 484)">
+            <circle r="20" />
+            <text y="-32">Dataset disappearance</text>
+            <text class="node-code" y="41">ISSUE</text>
+          </g>
+          <g class="map-node output" role="button" tabindex="0" data-map="design-critique" transform="translate(1088 566)">
+            <rect x="-52" y="-23" width="104" height="46" />
+            <text y="-39">Design critique</text>
+            <text class="node-code" y="50">TAKEAWAY</text>
+          </g>
+        </svg>
+
+        <aside class="map-readout" aria-live="polite">
+          <span id="mapType">ACTOR</span>
+          <h3 id="mapTitleText">Image subjects</h3>
+          <p id="mapBody">People appear first as photographed subjects, then as dataset material, then as labels. The map begins here because the project asks what happens when personhood is converted into training data.</p>
+          <div class="map-thought">
+            <span>Thought process</span>
+            <p>The map reads left to right: people and image resources enter the dataset, annotation and taxonomy convert them into training infrastructure, the interface makes the system public, and criticism loops back through institutions and design practice.</p>
+          </div>
+          <dl>
+            <div>
+              <dt>Connected to</dt>
+              <dd id="mapConnections">Web images, consent gap, design critique</dd>
+            </div>
+            <div>
+              <dt>Critical issue</dt>
+              <dd id="mapIssue">Representation without meaningful control over collection, labeling, or reuse.</dd>
+            </div>
+          </dl>
         </aside>
-      </section>
+      </div>
+    </section>
 
-      <section id="layers" class="content-section analysis-section" data-section>
-        <p class="section-kicker">Part 2 / Layers of Analysis</p>
-        <h2>Inspect the project as nested systems</h2>
-        <p class="analysis-intro">This section reads Excavating AI as a composed system: a set of technical objects, cultural assumptions, historical pressures, and representational choices. The project is not only about datasets; it is itself built like an archive that asks viewers to inspect the machinery of classification.</p>
+    <section id="part-2" class="layers section-panel" data-section>
+      <div class="section-title">
+        <p class="kicker">Part 2 / Layers of Analysis</p>
+        <h2>Ontology, context, visual language</h2>
+        <p>The project is built like an archive that asks viewers to inspect the machinery of classification. These layers keep the original Part 2 analysis and make it navigable.</p>
+      </div>
 
-        <div class="analysis-stack">
-          <article class="analysis-layer">
-            <span class="layer-number">01</span>
-            <div>
-              <h3>Ontological analysis</h3>
-              <p>At the simplest level, the project asks what exists inside machine vision before a model ever appears to see. It lays out the hidden ontology of AI training: images, labels, taxonomies, classes, annotators, interfaces, models, users, institutions, and the social meanings carried by every category.</p>
+      <div class="layer-tabs" role="tablist" aria-label="Analysis layers">
+        <button class="layer-tab active" type="button" data-layer="ontology">Ontological</button>
+        <button class="layer-tab" type="button" data-layer="context">Historical</button>
+        <button class="layer-tab" type="button" data-layer="visual">Visual</button>
+      </div>
 
-              <div class="ontology-grid" aria-label="Project components and building blocks">
-                <button class="ontology-card active" type="button" data-ontology="material">
-                  <span>01</span>
-                  <strong>Material layer</strong>
-                  <small>Images, archives, screenshots, faces</small>
-                </button>
-                <button class="ontology-card" type="button" data-ontology="classification">
-                  <span>02</span>
-                  <strong>Classification layer</strong>
-                  <small>WordNet, ImageNet, labels, classes</small>
-                </button>
-                <button class="ontology-card" type="button" data-ontology="labor">
-                  <span>03</span>
-                  <strong>Labor layer</strong>
-                  <small>Annotators, dataset builders, subjects</small>
-                </button>
-                <button class="ontology-card" type="button" data-ontology="technical">
-                  <span>04</span>
-                  <strong>Technical layer</strong>
-                  <small>Training sets, models, benchmarks</small>
-                </button>
-                <button class="ontology-card" type="button" data-ontology="institutional">
-                  <span>05</span>
-                  <strong>Institutional layer</strong>
-                  <small>Labs, universities, museums, platforms</small>
-                </button>
-                <button class="ontology-card" type="button" data-ontology="political">
-                  <span>06</span>
-                  <strong>Political layer</strong>
-                  <small>Bias, race, gender, consent, harm</small>
-                </button>
-              </div>
-
-              <div class="ontology-output" aria-live="polite">
-                <h4 id="ontologyTitle">Material layer</h4>
-                <p id="ontologyText">Photographs, scraped web images, historical archives, face datasets, screenshots, and labeled image examples become the project&apos;s basic matter. The argument begins by refusing to treat images as neutral raw material.</p>
-              </div>
-            </div>
-          </article>
-
-          <article class="analysis-layer">
-            <span class="layer-number">02</span>
-            <div>
-              <h3>Historical and contextual analysis</h3>
-              <p>The project appeared in 2019, at a moment when ImageNet was both a celebrated foundation of contemporary AI and newly vulnerable to public critique. ImageNet had been introduced in 2009, helped structure a decade of computer-vision research, and became tied to the 2012 deep-learning breakthrough that made neural-network image classification a dominant story in AI.</p>
-              <p>Crawford and Paglen were responding to the myth that machine vision is a neutral technical achievement. Their question is historical as much as technical: how did computer vision inherit older habits of sorting, measuring, naming, and judging people? The essay connects modern datasets to longer histories of classification, facial measurement, affect recognition, phrenology-like thinking, and institutional power.</p>
-              <p>The intended audience is deliberately mixed. It addresses AI researchers and technologists by examining training-set infrastructure, but it also speaks to artists, designers, theorists, students, museum publics, and general readers. The related Training Humans exhibition at Fondazione Prada extended the argument into a photography and visual-culture context, framing training images as objects that deserve historical, aesthetic, and political scrutiny.</p>
-            </div>
-          </article>
-
-          <article class="analysis-layer">
-            <span class="layer-number">03</span>
-            <div>
-              <h3>Visual and aesthetic representation</h3>
-              <p>Excavating AI uses a visual language of evidence. It does not rely on speculative AI imagery or futuristic abstraction. Instead, it shows the ordinary materials of machine vision: interface screenshots, taxonomy trees, archival photographs, face grids, dataset montages, labels, captions, and examples of misclassification.</p>
-              <p>This representational strategy makes the invisible infrastructure of AI visible. The aesthetic is forensic and archival: images are arranged like proof, not illustration. By preserving the look of dataset interfaces and technical documentation, the project lets the viewer feel how bureaucratic and banal classification can appear, even when its social consequences are severe.</p>
-              <p>The style sits between several communities and precedents: conceptual photography, institutional critique, media archaeology, science and technology studies, critical data visualization, and exhibition-based archival research. Its visual argument depends on a reversal: the dataset looks at people, but the project asks the audience to look back at the dataset.</p>
-            </div>
-          </article>
-        </div>
-
-        <div class="analysis-sources" aria-label="Analysis source notes">
-          <h3>Source notes</h3>
-          <p>This reading draws on the original <a href="https://excavating.ai/" target="_blank" rel="noopener">Excavating AI</a> essay, which frames the work as an archaeology of datasets and describes the layered architecture of training sets, and on Fondazione Prada's <a href="https://www.fondazioneprada.org/project/training-humans/?lang=en" target="_blank" rel="noopener">Training Humans</a> exhibition page, which situates the project within photography, visual culture, and public debate about AI systems.</p>
-        </div>
-      </section>
-
-      <section id="author-file" class="content-section" data-section>
-        <p class="section-kicker">Author File</p>
-        <h2>What Crawford and Paglen wrote or said about the project</h2>
-        <ol class="source-list">
-          <li>
-            <a href="https://excavating.ai/" target="_blank" rel="noopener">Crawford, Kate, and Trevor Paglen. "Excavating AI: The Politics of Images in Machine Learning Training Sets." Excavating AI, AI Now Institute, New York University, 19 Sept. 2019.</a>
-            <p>The original digital essay, where the authors describe their method as an archaeology of datasets.</p>
-          </li>
-          <li>
-            <a href="https://doi.org/10.1007/s00146-021-01162-8" target="_blank" rel="noopener">Crawford, Kate, and Trevor Paglen. "Excavating AI: The Politics of Images in Machine Learning Training Sets." AI &amp; Society, vol. 36, 2021, pp. 1105-1116.</a>
-            <p>The peer-reviewed version, which notes that an earlier version first appeared in September 2019.</p>
-          </li>
-          <li>
-            <a href="https://paglen.studio/2020/01/21/excavating-ai/" target="_blank" rel="noopener">Paglen, Trevor. "Excavating AI." Trevor Paglen Studio, 21 Jan. 2020.</a>
-            <p>A short author statement describing the essay's focus on the flawed assumptions and politics built into AI training data.</p>
-          </li>
-          <li>
-            <a href="https://paglen.studio/2020/04/29/imagenet-roulette/" target="_blank" rel="noopener">Paglen, Trevor. "ImageNet Roulette." Trevor Paglen Studio, 29 Apr. 2020.</a>
-            <p>Explains ImageNet Roulette as an experiment showing what goes wrong when models learn from ImageNet's person categories.</p>
-          </li>
-          <li>
-            <a href="https://paglen.studio/2020/04/09/kate-crawford-trevor-paglen-training-humans/" target="_blank" rel="noopener">Paglen, Trevor. "Training Humans." Trevor Paglen Studio, 9 Apr. 2020.</a>
-            <p>Describes the exhibition, conceived with Crawford, on the history of images used to recognize humans in computer vision.</p>
-          </li>
-          <li>
-            <a href="https://www.fondazioneprada.org/project/training-humans/?lang=en" target="_blank" rel="noopener">Fondazione Prada. "Kate Crawford | Trevor Paglen: Training Humans." 2019-2020.</a>
-            <p>Exhibition context in which Crawford frames the work as an attempt to open the black boxes of AI.</p>
-          </li>
-        </ol>
-      </section>
-
-      <section id="response-file" class="content-section" data-section>
-        <p class="section-kicker">Response File</p>
-        <h2>How the project circulated and was contested</h2>
-        <ol class="source-list source-list-compact">
-          <li>
-            <span>Simonite, Tom. "The Viral App That Labels You Isn't Quite What You Think." Wired, 2019.</span>
-            <p>Reports how ImageNet Roulette went viral and revealed biased, problematic labels inside ImageNet.</p>
-          </li>
-          <li>
-            <a href="https://www.frieze.com/article/how-ai-selfie-app-imagenet-roulette-took-internet-storm" target="_blank" rel="noopener">Frieze. "How AI Selfie App ImageNet Roulette Took the Internet by Storm." Frieze, 2019.</a>
-            <p>Frames the project through art-world and internet reception, focusing on the labels users shared publicly.</p>
-          </li>
-          <li>
-            <span>Wong, Julia Carrie. "The Viral Selfie App ImageNet Roulette Seemed Fun." The Guardian, 2019.</span>
-            <p>Discusses the experience of being labeled by the tool and the racialized categories it exposed.</p>
-          </li>
-          <li>
-            <a href="https://arxiv.org/abs/2009.01215" target="_blank" rel="noopener">Lyons, Michael J. "Excavating 'Excavating AI': The Elephant in the Gallery." arXiv, 2020.</a>
-            <p>A critical response raising concerns about informed consent and how facial-image datasets were exhibited.</p>
-          </li>
-          <li>
-            <a href="https://arxiv.org/abs/2107.13998" target="_blank" rel="noopener">Lyons, Michael J. "'Excavating AI' Re-excavated: Debunking a Fallacious Account of the JAFFE Dataset." arXiv, 2021.</a>
-            <p>Continues the critique, challenging the authors' account of the JAFFE dataset.</p>
-          </li>
-        </ol>
-      </section>
-
-      <section id="demo" class="content-section demo-section" data-section>
-        <div class="demo-copy">
-          <p class="section-kicker">Classification Demo</p>
-          <h2>One input becomes one administrative label</h2>
-          <p>ImageNet Roulette, part of the project, classified anyone who uploaded a photo using ImageNet's person categories. The interface below dramatizes the central critique: a complex person becomes a simplified category with a confidence score.</p>
-        </div>
-        <div class="demo-panel">
-          <div class="demo-screen" aria-live="polite">
-            <span class="demo-status">Awaiting input</span>
-            <strong id="demoLabel">No label assigned</strong>
-            <div class="confidence-meter">
-              <span id="confidenceFill" style="width: 0%"></span>
-            </div>
-            <p id="messageDisplay">Run the classifier to see how the interface compresses context, identity, and personhood into a single machine-readable tag.</p>
+      <article class="layer-output" aria-live="polite">
+        <span id="layerNumber">01</span>
+        <div>
+          <h3 id="layerTitle">Ontological analysis</h3>
+          <p id="layerText">At the simplest level, the project asks what exists inside machine vision before a model ever appears to see. Its building blocks are images, labels, taxonomies, classes, annotators, interfaces, models, users, institutions, and the social meanings carried by every category.</p>
+          <div class="ontology-orbit" aria-label="Project components">
+            <button class="orbit-node active" type="button" data-node="images">Images</button>
+            <button class="orbit-node" type="button" data-node="labels">Labels</button>
+            <button class="orbit-node" type="button" data-node="taxonomy">Taxonomy</button>
+            <button class="orbit-node" type="button" data-node="labor">Labor</button>
+            <button class="orbit-node" type="button" data-node="models">Models</button>
+            <button class="orbit-node" type="button" data-node="power">Power</button>
           </div>
-          <button id="demoButton" type="button">
-            <span aria-hidden="true">RUN</span>
-            Classify sample
+          <p class="node-readout" id="nodeReadout">Images are not neutral inputs. They are scraped, selected, cropped, captioned, stored, and re-used across technical and cultural contexts.</p>
+        </div>
+      </article>
+    </section>
+
+    <section id="plates" class="plates section-panel" data-section>
+      <div class="section-title">
+        <p class="kicker">Original Image File / Interactive Plates</p>
+        <h2>Click evidence, watch the argument move</h2>
+        <p>The original precedent images are not decoration. Each one performs a job in the argument. Click a plate to animate its corresponding idea and update the reading panel.</p>
+      </div>
+
+      <div class="plate-layout">
+        <div class="plate-grid" aria-label="Original project images">
+          <button class="plate-card active" type="button" data-plate="interface">
+            <img src="assets/original/imagenet-interface-2.jpg" alt="ImageNet interface used by Amazon Turk workers to label pictures.">
+            <span>Interface / Labor</span>
           </button>
-          <div class="trace-list" aria-label="Classification trace">
-            <span>image crop</span>
-            <span>feature extraction</span>
-            <span>taxonomy lookup</span>
-            <span>label output</span>
-          </div>
+          <button class="plate-card" type="button" data-plate="taxonomy">
+            <img src="assets/original/imagenet-taxonomy.png" alt="ImageNet taxonomy screenshot with person categories.">
+            <span>Taxonomy / Hierarchy</span>
+          </button>
+          <button class="plate-card" type="button" data-plate="measurement">
+            <img src="assets/original/diff-face.png" alt="IBM Diversity in Faces diagram with facial landmarks.">
+            <span>Face / Measurement</span>
+          </button>
+          <button class="plate-card" type="button" data-plate="dataset">
+            <img src="assets/original/msceleb.jpg" alt="MS-Celeb face dataset montage.">
+            <span>Dataset / Population</span>
+          </button>
+          <button class="plate-card" type="button" data-plate="counter">
+            <img src="assets/original/i-am-a-man.jpg" alt="Memphis sanitation workers holding I AM A MAN signs.">
+            <span>Counter-image / Personhood</span>
+          </button>
         </div>
-      </section>
-    </article>
+
+        <figure class="plate-view active-motion" id="plateView">
+          <img id="plateImage" src="assets/original/imagenet-interface-2.jpg" alt="ImageNet interface used by Amazon Turk workers to label pictures.">
+          <div class="plate-overlay" aria-hidden="true">
+            <span class="plate-line line-x"></span>
+            <span class="plate-line line-y"></span>
+            <span class="plate-square square-a"></span>
+            <span class="plate-square square-b"></span>
+          </div>
+          <figcaption>
+            <span id="plateLabel">PL-01 / Interface as labor site</span>
+            <strong id="plateTitle">The interface reveals the human work behind machine vision.</strong>
+            <p id="plateText">The labeling screen turns AI into a workplace. It shows that machine recognition depends on people clicking, interpreting, and standardizing images before automation can claim authority.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="part-3" class="part-three section-panel" data-section>
+      <div class="section-title">
+        <p class="kicker">Part 3 / Method, Rhetoric, Practice</p>
+        <h2>What method makes the critique possible?</h2>
+        <p>Part 3 shifts from what the project is to how it works: its software approach, data provenance, theoretical method, rhetorical argument, and connection to Crawford and Paglen's wider practices.</p>
+      </div>
+
+      <div class="method-board">
+        <article class="method-card active" data-method="software">
+          <button type="button">Software approach</button>
+          <p>ImageNet Roulette trained an open-source Caffe model on ImageNet's "person" categories, used face detection, and returned bounding boxes plus labels. The software was not offered as a neutral demo. It was a controlled provocation that exposed what a model learns when the dataset is already corrupted by social judgment.</p>
+        </article>
+        <article class="method-card" data-method="data">
+          <button type="button">Data uses + provenance</button>
+          <p>The evidence comes from ImageNet, WordNet, JAFFE, UTKFace, IBM Diversity in Faces, MS-Celeb, and other image collections. The project follows where images came from, how they were annotated, who was visible or invisible in the process, and how categories traveled from language systems into computer-vision infrastructure.</p>
+        </article>
+        <article class="method-card" data-method="theory">
+          <button type="button">Theoretical methods</button>
+          <p>The method combines media archaeology, science and technology studies, semiotics, institutional critique, critical race and gender analysis, and visual culture. Its key move is to read a dataset as a historical artifact with layers, assumptions, labor, and politics.</p>
+        </article>
+        <article class="method-card" data-method="rhetoric">
+          <button type="button">Rhetorical analysis</button>
+          <p>The precedent argues that AI classification is not simply technical. It makes the claim through shock, evidence, and reversal: first the reader sees ordinary object labels, then person categories reveal cruelty, absurdity, and inherited power. The essay is critical because it exposes the infrastructure that normally remains hidden.</p>
+        </article>
+        <article class="method-card" data-method="practice">
+          <button type="button">Wider practice</button>
+          <p>For Crawford, the project continues a practice of mapping AI as material, political, and extractive, from Anatomy of an AI System to Atlas of AI and Calculating Empires. For Paglen, it extends a long investigation into hidden infrastructures, surveillance, machine vision, and the images used by systems of power.</p>
+        </article>
+        <article class="method-card" data-method="appraisal">
+          <button type="button">Personal assessment</button>
+          <p>The precedent is powerful because it changes where the viewer looks: away from polished AI outputs and toward the training-set architecture. My criticism is that its strongest public moments can risk spectacle; showing harmful labels and sensitive image histories must be handled carefully so critique does not reproduce the violence it exposes.</p>
+        </article>
+      </div>
+
+      <div class="method-output" aria-live="polite">
+        <span id="methodTag">SOFTWARE APPROACH</span>
+        <h3 id="methodTitle">The demo is a critical instrument.</h3>
+        <p id="methodText">The software workflow matters because it makes a normally invisible chain visible: upload, detect, classify, display, react. The interface becomes a rhetorical device, not only a technical one.</p>
+      </div>
+    </section>
+
+    <section id="assessment" class="assessment section-panel" data-section>
+      <div class="section-title">
+        <p class="kicker">Appraisal + Criticism</p>
+        <h2>Why this precedent matters for design</h2>
+        <p>Excavating AI is a strong precedent for computational design because it treats a dataset as an authored spatial system. It shows that classification has architecture: entries, hierarchies, boundaries, rooms, exclusions, and points of force.</p>
+      </div>
+
+      <div class="assessment-grid">
+        <article>
+          <span>Appraisal</span>
+          <h3>It gives designers a method for looking upstream.</h3>
+          <p>The project teaches that critique should not wait until an AI system harms someone. Designers can inspect training data, collection protocols, labels, interfaces, benchmarks, and institutional incentives before the model becomes public infrastructure.</p>
+        </article>
+        <article>
+          <span>Criticism</span>
+          <h3>It raises its own ethical problem of display.</h3>
+          <p>The project depends on showing disturbing labels and controversial datasets. That exposure is necessary for accountability, but it also requires careful framing, consent awareness, and attention to whether harmed subjects are being made visible again for another audience.</p>
+        </article>
+        <article>
+          <span>Design takeaway</span>
+          <h3>Make provenance part of the interface.</h3>
+          <p>Future AI interfaces should not only output a category. They should reveal dataset lineage, confidence, uncertainty, category history, possible harms, and the human decisions behind the label.</p>
+        </article>
+      </div>
+
+      <div id="react-irony-root" class="react-irony-root"></div>
+    </section>
+
+    <section id="sources" class="sources section-panel" data-section>
+      <div class="section-title">
+        <p class="kicker">Sources + Style Notes</p>
+        <h2>Research base and visual system</h2>
+      </div>
+
+      <div class="source-columns">
+        <ol>
+          <li><a href="https://excavating.ai/" target="_blank" rel="noopener">Crawford, Kate, and Trevor Paglen. Excavating AI: The Politics of Images in Machine Learning Training Sets. 2019.</a></li>
+          <li><a href="https://doi.org/10.1007/s00146-021-01162-8" target="_blank" rel="noopener">Crawford, Kate, and Trevor Paglen. Excavating AI. AI &amp; Society, 2021.</a></li>
+          <li><a href="https://paglen.studio/2020/04/29/imagenet-roulette/" target="_blank" rel="noopener">Paglen Studio. ImageNet Roulette. 2020.</a></li>
+          <li><a href="https://www.fondazioneprada.org/project/training-humans/?lang=en" target="_blank" rel="noopener">Fondazione Prada. Training Humans. 2019-2020.</a></li>
+          <li><a href="https://anatomyof.ai/" target="_blank" rel="noopener">Crawford, Kate, and Vladan Joler. Anatomy of an AI System. 2018.</a></li>
+          <li><a href="https://jimproctor.us/archive/envsresources/mapping-actors-processes/" target="_blank" rel="noopener">Proctor, Jim. Mapping Actors and Processes. Environmental Studies resources.</a></li>
+          <li><a href="https://calculatingempires.net/about" target="_blank" rel="noopener">Crawford, Kate, and Vladan Joler. Calculating Empires. 2023.</a></li>
+          <li><a href="https://arxiv.org/abs/2009.01215" target="_blank" rel="noopener">Lyons, Michael J. Excavating "Excavating AI": The Elephant in the Gallery. 2020.</a></li>
+        </ol>
+        <div class="style-note">
+          <p>The site uses the presentation visual language as a key: black-and-white collage, cyan annotation fields, red italic urgency, pixel deletion blocks, scan lines, and layered evidence plates.</p>
+          <a href="STYLE_GUIDE.md">Open STYLE_GUIDE.md</a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <span>Excavating AI</span>
-    <span>Interactive editorial precedent study</span>
+  <footer class="site-footer">
+    <span>Complete Precedent Study</span>
+    <span>Images / Labels / Taxonomies / Power</span>
   </footer>
 
+  <script src="assets/vendor/react.production.min.js"></script>
+  <script src="assets/vendor/react-dom.production.min.js"></script>
+  <script src="react-irony.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
